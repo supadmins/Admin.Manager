@@ -13,6 +13,10 @@ namespace Admin.Manager.Controllers
             return View();
         }
 
+        public ActionResult BootPage() {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -26,5 +30,7 @@ namespace Admin.Manager.Controllers
 
             return View();
         }
+
+
     }
 }

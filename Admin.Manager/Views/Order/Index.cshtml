@@ -1,0 +1,156 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title> 管理平台</title>
+    <link rel="stylesheet" href="~/Content/layui/css/layui.css" />
+    <link rel="stylesheet" href="~/Content/css/admin.css" />
+</head>
+<body>
+    <div class="container">
+        <fieldset class="layui-elem-field mt10">
+            <legend>账户信息</legend>
+            <div class="layui-field-box">
+                <table class="layui-table" lay-skin="nob">
+                    <tbody>
+                        <tr>
+                            <td>账户余额：<span class="price">1200.00</span></td>
+                            <td>账户AGR：120000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </fieldset>
+        <div class="layui-tab">
+            <ul class="layui-tab-title">
+                <li class="layui-this">账户明细</li>
+                <li>AGR明细</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <!-- 账户明细 -->
+                    <div class="table-list">
+                        <table class="layui-table" lay-skin="nob">
+                            <thead>
+                                <tr>
+                                    <th width="30%">时间</th>
+                                    <th>描述</th>
+                                    <th>金额</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2016-01-29 16:38</td>
+                                    <td>充值金额1000.00，账户余额为100000.00</td>
+                                    <td><span class='red'>+10000.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2016-01-29 16:38</td>
+                                    <td>提现金额1000.00，账户余额为100000.00</td>
+                                    <td>-10000.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="table-pages" style="text-align:center"></div>
+
+                    <!-- 账户明细end -->
+                </div>
+                <div class="layui-tab-item">
+                    <!-- AGR明细 -->
+                    <div class="table-list">
+                        <table class="layui-table" lay-skin="nob">
+                            <thead>
+                                <tr>
+                                    <th>时间</th>
+                                    <th>描述</th>
+                                    <th>账户AGR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2016-01-29 16:38</td>
+                                    <td>提现金额1000.00，账户余额为100000.00</td>
+                                    <td>1000000</td>
+                                </tr>
+                                <tr>
+                                    <td>2016-01-29 16:38</td>
+                                    <td>购买钻石陀飞轮，花费1000AGR</td>
+                                    <td>1000000</td>
+                                </tr>
+                                <tr>
+                                    <td>2016-01-29 16:38</td>
+                                    <td>购买钻石陀飞轮，花费1000AGR</td>
+                                    <td>1000000</td>
+                                </tr>
+                                <tr>
+                                    <td>2016-01-29 16:38</td>
+                                    <td>购买钻石陀飞轮，花费1000AGR</td>
+                                    <td>1000000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="table-pages2" style="text-align:center"></div>
+                    <!-- AGR明细end -->
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script type="text/javascript" src="~/Content/layui/layui.js"></script>
+    <script>
+		layui.use(['jquery','form','laydate','layer','laypage','element'], function(){
+			var $ = layui.jquery,
+			    laydate = layui.laydate,
+			    layer = layui.layer,
+			    laypage = layui.laypage,
+			    element = layui.element();
+
+			// 分页
+			 laypage({
+			    cont: 'table-pages'
+			    ,pages: 2
+			    ,skip: true
+			  });
+			laypage({
+			    cont: 'table-pages2'
+			    ,pages: 2
+			    ,skip: true
+			  });
+
+           // 开始时间及截止时间
+            var start = {
+			   choose: function(datas){
+			      end.min = datas; //开始日选好后，重置结束日的最小日期
+			      end.start = datas //将结束日的初始值设定为开始日
+			    }
+			  };
+
+			  var end = {
+			    choose: function(datas){
+			      start.max = datas; //结束日选好后，重置开始日的最大日期
+			    }
+			  };
+
+			$('#start').click(function(){
+				start.elem = this;
+    			laydate(start);
+			});
+
+			$('#end').click(function(){
+				end.elem = this
+    			laydate(end);
+			});
+
+		});
+    </script>
+</body>
+</html>

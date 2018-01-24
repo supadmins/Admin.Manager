@@ -1,0 +1,310 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title> 管理平台</title>
+    <link rel="stylesheet" href="~/Content/layui/css/layui.css" />
+    <link rel="stylesheet" href="~/Content/css/admin.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="content-search">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="layui-inline">
+                    <label class="layui-form-label">订单编号</label>
+                    <div class="layui-input-block">
+                        <input name="date" placeholder="请输入订单编号" autocomplete="off" class="layui-input" type="text" />
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">订单类型</label>
+                    <div class="layui-input-inline">
+                        <select name="city" lay-verify="">
+                            <option value="0">请选择</option>
+                            <option value="1">平台</option>
+                            <option value="2">第三方</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">订单状态</label>
+                    <div class="layui-input-inline">
+                        <select name="city" lay-verify="">
+                            <option value="0">请选择</option>
+                            <option value="1">待发货</option>
+                            <option value="2">待签收</option>
+                            <option value="3">已签收</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">第三方</label>
+                    <div class="layui-input-block">
+                        <input name="date" placeholder="请输入第三方" autocomplete="off" class="layui-input" type="text" />
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">开始时间</label>
+                    <div class="layui-input-inline">
+                        <input class="layui-input layui-date" placeholder="开始时间" id="start">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">截止时间</label>
+                    <div class="layui-input-inline">
+                        <input class="layui-input layui-date" placeholder="结束时间" id="end">
+                    </div>
+                </div>
+                <div class="layui-inline"><button class="layui-btn" lay-submit="">查询</button></div>
+            </form>
+        </div>
+        <div class="table-list roll-x">
+            <table class="layui-table" lay-skin="line">
+                <thead>
+                    <tr>
+                        <th>订单编号</th>
+                        <th>订单类型</th>
+                        <th>第三方</th>
+                        <th>商品名称</th>
+                        <th>成交金额</th>
+                        <th>成交AGR</th>
+                        <th>会员ID</th>
+                        <th>收货人</th>
+                        <th>收货人手机号码</th>
+                        <th>订单状态</th>
+                        <th>交易时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="javascript:;" class="a1">SW00152100</a></td>
+                        <td>平台</td>
+                        <td></td>
+                        <td>钻石陀飞轮</td>
+                        <td><span class="price">10000.00</span></td>
+                        <td>50000</td>
+                        <td><a href="javascript:;" class="a2">100001</a></td>
+                        <td>张三</td>
+                        <td>13688888888</td>
+                        <td><span class="red">待发货</span></td>
+                        <td>2017-05-05 12:00:00</td>
+                        <td>
+                            <button class="layui-btn layui-btn-normal layui-btn-small a3">发货</button>
+                            <button class="layui-btn layui-btn-danger layui-btn-small a4">取消订单</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="javascript:;" class="a7">SW00152100</a></td>
+                        <td>平台</td>
+                        <td></td>
+                        <td>钻石陀飞轮</td>
+                        <td><span class="price">10000.00</span></td>
+                        <td>50000</td>
+                        <td><a href="javascript:;" class="a2">100001</a></td>
+                        <td>张三</td>
+                        <td>13688888888</td>
+                        <td>待签收</td>
+                        <td>2017-05-05 12:00:00</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="javascript:;" class="a7">SW00152100</a></td>
+                        <td>平台</td>
+                        <td></td>
+                        <td>钻石陀飞轮</td>
+                        <td><span class="price">10000.00</span></td>
+                        <td>50000</td>
+                        <td><a href="javascript:;" class="a2">100001</a></td>
+                        <td>张三</td>
+                        <td>13688888888</td>
+                        <td>已签收</td>
+                        <td>2017-05-05 12:00:00</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="javascript:;" class="a5">SW00152100</a></td>
+                        <td>第三方</td>
+                        <td>XXX公司</td>
+                        <td>钻石陀飞轮</td>
+                        <td><span class="price">10000.00</span></td>
+                        <td>50000</td>
+                        <td><a href="javascript:;" class="a2">100001</a></td>
+                        <td>张三</td>
+                        <td>13688888888</td>
+                        <td><span class="red">待发货</span></td>
+                        <td>2017-05-05 12:00:00</td>
+                        <td>
+                            <button class="layui-btn layui-btn-warm layui-btn-small a6">发货</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="javascript:;" class="a8">SW00152100</a></td>
+                        <td>第三方</td>
+                        <td>XXX公司</td>
+                        <td>钻石陀飞轮</td>
+                        <td><span class="price">10000.00</span></td>
+                        <td>50000</td>
+                        <td><a href="javascript:;" class="a2">100001</a></td>
+                        <td>张三</td>
+                        <td>13688888888</td>
+                        <td>待签收</td>
+                        <td>2017-05-05 12:00:00</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="javascript:;" class="a8">SW00152100</a></td>
+                        <td>第三方</td>
+                        <td>XXX公司</td>
+                        <td>钻石陀飞轮</td>
+                        <td><span class="price">10000.00</span></td>
+                        <td>50000</td>
+                        <td><a href="javascript:;" class="a2">100001</a></td>
+                        <td>张三</td>
+                        <td>13688888888</td>
+                        <td>已签收</td>
+                        <td>2017-05-05 12:00:00</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="table-pages" style="text-align:center"></div>
+    <script type="text/javascript" src="~/Content/layui/layui.js"></script>
+    <script>
+		layui.use(['jquery', 'laydate','form','layer','laypage'], function(){
+			var $ = layui.jquery,
+			    laydate = layui.laydate,
+			    layer = layui.layer,
+			    laypage = layui.laypage;
+
+			// 分页
+			 laypage({
+			    cont: 'table-pages'
+			    ,pages: 100
+			    ,skip: true
+			  });
+
+            // 开始时间及截止时间
+            var start = {
+			   choose: function(datas){
+			      end.min = datas; //开始日选好后，重置结束日的最小日期
+			      end.start = datas //将结束日的初始值设定为开始日
+			    }
+			  };
+
+			  var end = {
+			    choose: function(datas){
+			      start.max = datas; //结束日选好后，重置开始日的最大日期
+			    }
+			  };
+
+			$('#start').click(function(){
+				start.elem = this;
+    			laydate(start);
+			});
+
+			$('#end').click(function(){
+				end.elem = this
+    			laydate(end);
+			});
+
+
+			//待发货详情
+			$(document).on("click", ".a1", function() {
+				layer.open({
+			      type:2
+			      ,area:['80%', '90%']
+			      ,title:"订单详情"
+				  ,content: '平台待发货详情.html'
+				});
+			});
+
+			$(document).on("click", ".a5", function() {
+				layer.open({
+			      type:2
+			      ,area:['80%', '90%']
+			      ,title:"订单详情"
+				  ,content: '第三方待发货详情.html'
+				});
+			});
+
+			// 待签收，已签收详情
+			$(document).on("click", ".a7", function() {
+				layer.open({
+			      type:2
+			      ,area:['80%', '90%']
+			      ,title:"订单详情"
+				  ,content: '平台已发货详情.html'
+				});
+			});
+			$(document).on("click", ".a8", function() {
+				layer.open({
+			      type:2
+			      ,area:['80%', '90%']
+			      ,title:"订单详情"
+				  ,content: '第三方已发货详情.html'
+				});
+			});
+
+			// 会员详情
+			$(document).on("click", ".a2", function() {
+			    layer.open({
+			      type:2
+			      ,area:['50%', '70%']
+			      ,title:"会员详情"
+				  ,content: '会员详情.html'
+				});
+			});
+			// 平台发货
+			$(document).on("click", ".a3", function() {
+			    layer.open({
+			      type:2
+			      ,area:['50%', '50%']
+			      ,title:"平台发货"
+				  ,content: '平台发货.html'
+				});
+			});
+			// 平台替第三方发货
+			$(document).on("click", ".a6", function() {
+				layer.open({
+			      title:"第三方发货提醒"
+				  ,content: '该订单为第三方（XXX公司）订单您确认由平台发货吗?'
+				  ,btn: ['取消', '确认']
+				  ,yes: function(index, layero){
+				       layer.closeAll();
+				  }
+				  ,btn2: function(index, layero){
+				  	layer.open({
+				  		type:2
+			      		,area:['50%', '70%']
+				      	,title:"平台发货"
+				  		,content: '平台发货.html'
+					});
+				  }
+				});
+
+			});
+
+			// 取消订单
+			$(document).on("click", ".a4", function() {
+			    layer.open({
+			      type:2
+				  ,area:['40%', '40%']
+			      ,title:"取消订单"
+				  ,content: '取消订单.html'
+				});
+			});
+
+		});
+    </script>
+</body>
+</html>
