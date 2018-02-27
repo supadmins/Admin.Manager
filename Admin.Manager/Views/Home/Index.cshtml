@@ -1,6 +1,6 @@
 ﻿@{
     Layout = null;
- }
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +19,7 @@
             <div class="layui-main">
                 <div class="top-left">
                     <!-- logo -->
-                    <a href="javascript:;" class="logo">管理平台</a>
+                    <a href="javascript:;" class="logo">易结汇商户管理后台</a>
                     <a href="javascript:;" class="menu-flexible ml10">
                         <i class="layui-icon">&#xe635;</i>
                     </a>
@@ -28,19 +28,19 @@
                 <ul class="layui-nav operate">
                     <li class="layui-nav-item">
                         <!-- 进入商城首页    -->
-                        <a href="javascript:;">客户管理</a>
+                        <a href="/Customer" data-url="/Customer">商户管理</a>
                     </li>
-                    <li class="layui-nav-item">
-    <!-- 进入移动端首页    -->
-                    <a href="javascript:;" class="wap">商城</a>
-                    <dl class="layui-nav-child">
-                        <dd class="p10">
-                            <img src="img/pic.png" width="150px" height="150px" alt="">
-                            <p class="tac" style="color:#333;">扫一扫进入</p>
-                        </dd>
-                    </dl>
-                    </li>
-             
+                    @* <li class="layui-nav-item">
+                            <!-- 进入移动端首页    -->
+                            <a href="javascript:;" class="wap">商城</a>
+                            <dl class="layui-nav-child">
+                                <dd class="p10">
+                                    <img src="img/pic.png" width="150px" height="150px" alt="">
+                                    <p class="tac" style="color:#333;">扫一扫进入</p>
+                                </dd>
+                            </dl>
+                        </li>*@
+
                     <li class="layui-nav-item">
                         <a href="javascript:;">137****6116</a>
                         <dl class="layui-nav-child">
@@ -60,9 +60,9 @@
             <div class="layui-side-scroll">
                 <ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu">
                     <li class="layui-nav-item layui-this">
-                        <a href="javascript:;" data-url="/home/BootPage" data-id="1">后台首页</a>
+                        <a href="javascript:;" data-url="/home/BootPage" data-id="1">交易汇总</a>
                     </li>
-                    <li class="layui-nav-item">
+                    <li class="layui-nav-item ">
                         <a href="javascript:;">客户管理</a>
                         <dl class="layui-nav-child">
                             <dd>
@@ -90,104 +90,110 @@
                         </dl>
                     </li>
                     @*<li class="layui-nav-item">
-                        <a href="javascript:;">报表管理</a>
-                        <dl class="layui-nav-child">
-                            <dd>
-                                <a href="javascript:;" data-url="首页轮播图.html" data-id="8">首页轮播图</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="热卖新品推荐.html" data-id="9">热卖/新品推荐</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="首页分类推荐.html" data-id="10">首页分类推荐</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="公告管理.html" data-id="11">公告管理</a>
-                            </dd>
-                        </dl>
-                    </li>*@
-                    <li class="layui-nav-item">
-                        <a href="javascript:;">账号管理</a>
-                        <dl class="layui-nav-child">
-                            <dd>
-                                <a href="javascript:;" data-url="运营管理账号.html" data-id="12">运营管理账号</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="会员账号.html" data-id="13">会员账号</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="第三方账号.html" data-id="14">第三方账号</a>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li class="layui-nav-item">
-                        <a href="javascript:;">财务管理</a>
-                        <dl class="layui-nav-child">
-                            <dd>
-                                <a href="javascript:;" data-url="财务统计.html" data-id="15">财务统计</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="提现管理.html" data-id="16">提现管理</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="分类统计.html" data-id="17">分类统计</a>
-                            </dd>
-                            @*<dd>
-                                <a href="javascript:;" data-url="商品统计.html" data-id="18">商品统计</a>
-                            </dd>*@
-                            <dd>
-                                <a href="javascript:;" data-url="第三方统计.html" data-id="19">第三方统计</a>
-                            </dd>
-                        </dl>
-                    </li>
+                <a href="javascript:;">报表管理</a>
+                <dl class="layui-nav-child">
+                    <dd>
+                        <a href="javascript:;" data-url="首页轮播图.html" data-id="8">首页轮播图</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;" data-url="热卖新品推荐.html" data-id="9">热卖/新品推荐</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;" data-url="首页分类推荐.html" data-id="10">首页分类推荐</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;" data-url="公告管理.html" data-id="11">公告管理</a>
+                    </dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+            <a href="javascript:;">账号管理</a>
+            <dl class="layui-nav-child">
+                <dd>
+                    <a href="javascript:;" data-url="运营管理账号.html" data-id="12">运营管理账号</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;" data-url="会员账号.html" data-id="13">会员账号</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;" data-url="第三方账号.html" data-id="14">第三方账号</a>
+                </dd>
+            </dl>
+        </li> 
+                        <li class="layui-nav-item">
+            <a href="javascript:;">财务管理</a>
+            <dl class="layui-nav-child">
+                <dd>
+                    <a href="javascript:;" data-url="财务统计.html" data-id="15">财务统计</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;" data-url="提现管理.html" data-id="16">提现管理</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;" data-url="分类统计.html" data-id="17">分类统计</a>
+                </dd>
+                <dd>
+                        <a href="javascript:;" data-url="商品统计.html" data-id="18">商品统计</a>
+                    </dd>
+                <dd>
+                    <a href="javascript:;" data-url="第三方统计.html" data-id="19">第三方统计</a>
+                </dd>
+            </dl>
+        </li>*@
 
-                    <li class="layui-nav-item">
-                        <a href="javascript:;">统计查询</a>
-                        @*<dl class="layui-nav-child">
-                            <dd>
-                                <a href="javascript:;" data-url="会员统计.html" data-id="20">会员统计</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="品牌查询.html" data-id="21">品牌查询</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="商品查询.html" data-id="22">商品查询</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="AGR转赠查询.html" data-id="23">AGR转赠查询</a>
-                            </dd>
-                        </dl>*@
-                    </li>
+                    @*<li class="layui-nav-item">
+        <a href="javascript:;">报表管理</a>
+        <dl class="layui-nav-child">
+                <dd>
+                    <a href="javascript:;" data-url="会员统计.html" data-id="20">会员统计</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;" data-url="品牌查询.html" data-id="21">品牌查询</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;" data-url="商品查询.html" data-id="22">商品查询</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;" data-url="AGR转赠查询.html" data-id="23">AGR转赠查询</a>
+                </dd>
+            </dl>
+                    </li>*@
                     <li class="layui-nav-item">
                         <a href="javascript:;">系统设置</a>
                         <dl class="layui-nav-child">
+                            <dd>
+                                <a href="javascript:;" data-url="运营管理账号.html" data-id="12">角色设置</a>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;" data-url="运营管理账号.html" data-id="12">用户列表</a>
+                            </dd>
                             @*<dd>
-                                <a href="javascript:;" data-url="操作日志.html" data-id="24">操作日志</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="商品类型管理.html" data-id="25">商品类型管理</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="商品属性管理.html" data-id="26">商品属性管理</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="品牌管理.html" data-id="27">品牌管理</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="导航设计.html" data-id="28">导航设计</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="系统参数设置.html" data-id="29">系统参数设置</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="修改绑定手机.html" data-id="30">修改绑定手机</a>
-                            </dd>*@
-                            <dd>
-                                <a href="javascript:;" data-url="退货地址管理.html" data-id="31">退货地址管理</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;" data-url="服务协议.html" data-id="32">服务协议</a>
-                            </dd>
+                    <a href="javascript:;" data-url="操作日志.html" data-id="24">操作日志</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;" data-url="商品类型管理.html" data-id="25">商品类型管理</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;" data-url="商品属性管理.html" data-id="26">商品属性管理</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;" data-url="品牌管理.html" data-id="27">品牌管理</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;" data-url="导航设计.html" data-id="28">导航设计</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;" data-url="系统参数设置.html" data-id="29">系统参数设置</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;" data-url="修改绑定手机.html" data-id="30">修改绑定手机</a>
+                    </dd>
+                <dd>
+                    <a href="javascript:;" data-url="退货地址管理.html" data-id="31">退货地址管理</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;" data-url="服务协议.html" data-id="32">服务协议</a>
+                </dd>*@
                         </dl>
                     </li>
                 </ul>
@@ -213,18 +219,18 @@
     <script type="text/javascript" src="/Content/layui/layui.js"></script>
     <script type="text/javascript" src="/Content/js/admin.js"></script>
     <script>
-        layui.use(['jquery','form','layer'], function(){
+        layui.use(['jquery', 'form', 'layer'], function () {
             var $ = layui.jquery,
                 layer = layui.layer,
                 laypage = layui.laypage;
 
             // 修改密码
-            $(document).on("click", ".edit-password", function() {
+            $(document).on("click", ".edit-password", function () {
                 layer.open({
-                  type:2
-                  ,area:['450px', '320px']
-                  ,title:"修改密码"
-                  ,content: '修改密码.html'
+                    type: 2
+                    , area: ['450px', '320px']
+                    , title: "修改密码"
+                    , content: '/Login/EditPassWord'
                 });
             });
         });

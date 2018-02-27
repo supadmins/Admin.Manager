@@ -404,6 +404,7 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Order\List.cshtml" />
+    <Content Include="Views\Login\EditPassWordDemo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
