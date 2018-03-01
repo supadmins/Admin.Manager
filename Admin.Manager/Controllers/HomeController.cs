@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IChipo.YJH.Server;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,13 @@ namespace Admin.Manager.Controllers
 {
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
-            return View();
+            var bll = new yjh_user_Repository();
+           var data= bll.Query(p => p.Id != null);
+            ViewBag.UserName = data?.FirstOrDefault().UserName;
+            return View(data);
         }
 
         public ActionResult BootPage() {

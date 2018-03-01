@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IChipo.YJH.Interfaces
 {
-    interface Iyjh_user_Repository
+   public interface Iyjh_user_Repository
     {
     }
 }
